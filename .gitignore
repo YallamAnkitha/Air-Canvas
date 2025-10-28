@@ -1,0 +1,35 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.class
+
+# virtual envs
+aircanvas-env/
+env/
+venv/
+ENV/
+.venv/
+
+# packaging
+build/
+dist/
+*.egg-info/
+
+# IDEs / editors
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS
+.DS_Store
+Thumbs.db
+
+# secrets
+.env
+
+# pytest
+.pytest_cache/
+

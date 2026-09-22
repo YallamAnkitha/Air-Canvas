@@ -1,0 +1,164 @@
+<html>
+<head>
+  <title>Admin Login</title>
+  <style>
+    body{font-family:Arial;margin:30px;background:#f9f9f9;}
+    h1{color:#333;}
+    form{border:1px solid #ccc;padding:15px;background:#ffffff00;width:300px;}
+    input{margin:5px 0;padding:5px;width:95%;}
+    button{background:#333;color:#fff;padding:6px 12px;border:none;cursor:pointer;}
+    button:hover{background:#555;}
+    ul{list-style:none;padding:0;}
+    li{margin:5px 0;}
+    a{text-decoration:none;color:#06c;}
+    a:hover{text-decoration:underline;}
+  </style>
+</head>
+<body>
+  <h1>Admin Login</h1>
+  <form method="post">
+    <p>Username: <input type="text" name="username"></p>
+    <p>Password: <input type="password" name="password"></p>
+    <button type="submit">Login</button>
+  </form>
+  <h2>Admin Options</h2>
+  <ul>
+    <li><a href="{% url 'view_users' %}">View All Users</a></li>
+    <li><a href="{% url 'admin_profile' %}">Admin Profile</a></li>
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+  </ul>
+</body>
+</html>
+---------------------------------------------------------------------------------------------
+<html>
+<head><title>Digital Alumni Networking System</title></head>
+<body>
+  <h1>Digital Alumni Networking System</h1>
+  <p><strong>Batch:8</strong> CSG 2025-2026</p>
+  <p><strong>Names of Team members:</strong> YALLAM ANKITHA,PERAM VISHNU,BODDUPALLY SAI KUMAR</p>
+  <p><strong>Roll Nos:</strong> 22BK1A7463,22BK1A7448,22BK1A7409</p>
+  <p><strong>Phone:</strong>7893814931,9849317938,9177891674</p>
+  <p><strong>Title:</strong> Digital Alumni Networking System</p>
+  <p><strong>Implementation:</strong> Using Django + Machine Learning</p>
+  <p><strong>About:</strong> This project is a digital platform for alumni networking, built using Django and integrated with machine learning techniques for enhanced user experience.</p>
+  <p><strong>Guide:</strong> Dr. Manjula</p>
+  <p><strong>HOD:</strong> Dr. Archana</p>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------
+<html>
+<head><title>Events</title></head>
+<body>
+  <h2>Upcoming Events</h2>
+<p>India Pharma Expo 2026 - April 23 to 25, 2026</p>
+<p>HIPLEX 2026 - August 7 to 10, 2026</p>
+  <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------
+<html>
+<head><title>Alumni Network - Home</title></head>
+<body>
+  <h1>Welcome to Digital Alumni Networking System</h1>
+
+  <ul>
+    <li><a href="/admin/">Admin Login</a></li>
+    <li><a href="{% url 'signup' %}">User Registration</a></li>
+    <li><a href="{% url 'login' %}">User Login</a></li>
+    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+  </ul>
+</body>
+</html>
+--------------------------------------------------------------------------
+<html>
+<head><title>Forum</title></head>
+<body>
+  <h1>Alumni Forum</h1>
+
+  <!-- Post a new message -->
+  <form method="post">
+    
+    <p><textarea name="message" rows="3" cols="40" placeholder="Write something..."></textarea></p>
+    <button type="submit">Post</button>
+  </form>
+
+  <h2>Messages</h2>
+  
+    <div style="border:1px solid #ccc; margin:5px; padding:5px;">
+      <p><strong></strong>: </p>
+      <small></small>
+    </div>
+  
+    <p>No messages yet</p>
+  
+
+  <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+</html>
+------------------------------------------------------------------------------------
+<html>
+<head><title>Connections</title></head>
+<body>
+  <h2>Suggested Alumni</h2>
+<p>Krishna Kanth- Python <a href="{% url 'connect' 1 %}">Connect</a></p>
+<p>Mary Smith - Java <a href="{% url 'connect' 2 %}">Connect</a></p>
+<p>Rahul Kumar - Django <a href="{% url 'connect' 3 %}">Connect</a></p>
+<p>Anita Reddy - React <a href="{% url 'connect' 4 %}">Connect</a></p>
+<p>Dolly Yadav - SQL <a href="{% url 'connect' 5 %}">Connect</a></p>
+<p>Sara Khan - Machine Learning <a href="{% url 'connect' 6 %}">Connect</a></p>
+ 
+      <h2>Suggested Connections</h2>
+<p>Krishna Kanth - <a href="{% url 'connect' 1 %}">Connect</a></p>
+<p>Mary Smith - <a href="{% url 'connect' 2 %}">Connect</a></p>
+<p>Rahul Kumar - <a href="{% url 'connect' 3 %}">Connect</a></p>
+<p>Anita Reddy - <a href="{% url 'connect' 4 %}">Connect</a></p>
+<p>Dolly Yadav - <a href="{% url 'connect' 5 %}">Connect</a></p>
+<p>Sara Khan - <a href="{% url 'connect' 6 %}">Connect</a></p>
+
+  {% endfor %}
+  <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+</html>
+-------------------------------------------------------------------------------------------
+
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h1>User Login</h1>
+  <form method="post">
+    
+    <p>Username: <input type="text" name="username"></p>
+    <p>Password: <input type="password" name="password"></p>
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a>
+</p>
+</body>
+</html>
+--------------------------------------------------------------------------
+<html>
+<head>
+  <title>Sign Up</title>
+</head>
+<body>
+  <h1>User Registration</h1>
+  <form method="post">
+   
+    <p>Username: <input type="text" name="username"></p>
+    <p>Password: <input type="password" name="password"></p>
+    <p>Email: <input type="email" name="email"></p>
+    <button type="submit">Register</button>
+  </form>
+
+  <hr>
+  <h2>Quick Links</h2>
+  <ul>
+    <li><a href="{% url 'about' %}">About Us</a></li>
+    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+    <li><a href="{% url 'signup' %}">User Registration</a></li>
+  </ul>
+</body>
+</html>
+
